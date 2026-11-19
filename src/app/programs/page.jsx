@@ -11,7 +11,7 @@ export default function Page() {
         title="A program for every learning milestone."
         description="Explore personalized tuition options for different ages, stages, and goals. Offerings shown are proposed and subject to confirmation."
       />
-      <section className="mx-auto grid max-w-7xl gap-6 px-5 py-24 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 md:grid-cols-2 lg:grid-cols-3">
         {programs.map((x, i) => (
           <ProgramCard key={x.slug} item={x} index={i} />
         ))}

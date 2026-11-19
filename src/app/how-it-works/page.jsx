@@ -9,7 +9,7 @@ export default function Page() {
         title="A simpler path to better learning."
         description="From the first conversation to ongoing support, discover how the Esperly learning journey is designed."
       />
-      <section className="mx-auto max-w-7xl px-5 py-24">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <InfoGrid
           items={[
             [

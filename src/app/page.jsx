@@ -1,4 +1,3 @@
-import PageExperience from "@/components/PageExperience";
 import LottieArt from "@/components/LottieArt";
 import PremiumShowcase from "@/components/PremiumShowcase";
 import AnimatedIcon from "@/components/AnimatedIcon";
@@ -38,8 +37,8 @@ export default function Home() {
   return (
     <>
       <EditorialHero />
-      <section className="border-y border-slate-100 bg-white px-5 py-10 lg:px-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 text-center md:grid-cols-5">
+      <section className="relative overflow-hidden border-y border-[#EB6664]/10 bg-gradient-to-r from-white via-[#FFF8F6] to-white px-4 py-7 sm:px-6 sm:py-9 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 text-center sm:gap-4 md:grid-cols-5">
           {[
             [Users, "Personal attention"],
             [Video, "Interactive classes"],
@@ -49,7 +48,7 @@ export default function Home() {
           ].map(([Icon, label]) => (
             <div
               key={label}
-              className="flex flex-col items-center gap-3 text-sm font-semibold text-slate-600"
+              className="group flex min-w-0 flex-col items-center justify-center gap-3 rounded-2xl border border-[#EB6664]/10 bg-white/80 px-3 py-5 text-xs font-semibold text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/25 hover:shadow-[0_14px_35px_rgba(235,102,100,.12)] sm:text-sm"
             >
               <AnimatedIcon
                 icon={Icon.displayName || Icon.name}
@@ -61,14 +60,14 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading
             eyebrow="The Esperly difference"
             title="More than tuition. A better way to learn."
             description="Because great learning happens when a child feels understood, encouraged, and excited to try."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               [
                 Lightbulb,
@@ -104,9 +103,9 @@ export default function Home() {
               <Reveal
                 key={title}
                 delay={i * 0.06}
-                className="group rounded-[28px] border border-slate-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/10 bg-white/95 p-5 shadow-[0_8px_30px_rgba(23,36,58,.04)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:bg-gradient-to-br hover:from-white hover:to-[#FFF1EE] hover:shadow-[0_24px_55px_rgba(235,102,100,.14)] sm:p-7"
               >
-                <span className="mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#FFF0EE] text-[#EB6664]">
+                <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FFE7DF] to-[#F5E9FF] text-[#EB6664] shadow-sm transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
                   <AnimatedIcon
                     icon={Icon.displayName || Icon.name}
                     size={26}
@@ -120,7 +119,7 @@ export default function Home() {
         </div>
       </section>
       <PremiumShowcase />
-      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-white to-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-3">
           {[
             ["book", "Explore ideas", "Animated learning moments"],
@@ -129,11 +128,12 @@ export default function Home() {
           ].map(([name, title, desc]) => (
             <div
               key={name}
-              className="group rounded-[28px] border border-[#EB6664]/10 bg-[#FFF9F6] p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(235,102,100,.12)]"
+              className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/15 bg-white p-5 text-center shadow-[0_8px_25px_rgba(23,36,58,.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_25px_60px_rgba(235,102,100,.16)] sm:p-7"
             >
               <LottieArt
                 name={name}
                 className="mx-auto h-36 w-44"
+                glow
                 label={title}
               />
               <h3 className="text-xl font-bold text-[#17243A]">{title}</h3>
@@ -142,7 +142,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="bg-gradient-to-br from-[#FFF0EE] via-[#FFF9F6] to-[#F1EDFF] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFF0EE] via-[#FFF9F6] to-[#F1EDFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
             <Heading
@@ -161,11 +161,11 @@ export default function Home() {
           </Slider>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#111827] via-[#17243A] to-[#29334F] px-5 py-28 lg:px-8">
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#EB6664]/15 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#101827] via-[#1E2943] to-[#452C56] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="pointer-events-none absolute -right-20 -top-24 h-96 w-96 rounded-full bg-[#EB6664]/25 blur-3xl" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
           <Reveal>
-            <div className="rounded-[32px] border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur">
+            <div className="rounded-[30px] border border-white/20 bg-white/[.09] p-4 shadow-[0_30px_80px_rgba(0,0,0,.25)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#FFB9AD]/40 sm:p-6">
               <div className="mb-6 flex items-center justify-between">
                 <span className="text-sm font-bold text-white">
                   Your learning space
@@ -187,7 +187,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex h-44 items-center justify-center rounded-2xl bg-[#FFF9F6] text-center">
-                  <span className="text-5xl font-bold tracking-tight text-[#17243A]">
+                  <span className="text-3xl sm:text-4xl font-bold tracking-tight text-[#17243A]">
                     a² + b² = c²
                   </span>
                 </div>
@@ -214,7 +214,7 @@ export default function Home() {
               description="Less one-size-fits-all. More aha moments. An approach designed to meet learners where they are and help them move forward."
               light
             />
-            <div className="mt-8 space-y-5">
+            <div className="mt-7 space-y-4">
               {[
                 "Individual attention",
                 "Learning at a comfortable pace",
@@ -232,12 +232,12 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-9">
-              <Button>Discover your learning path</Button>
+              <Button href="/programs">Discover your learning path</Button>
             </div>
           </div>
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
             <Heading
@@ -256,14 +256,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="bg-gradient-to-b from-white to-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading
             eyebrow="Simple by design"
             title="Your journey starts in four easy steps."
             center
           />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               [
                 "01",
@@ -288,9 +288,9 @@ export default function Home() {
             ].map(([num, title, desc]) => (
               <Reveal
                 key={num}
-                className="relative rounded-3xl bg-[#FFF9F6] p-7"
+                className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/10 bg-gradient-to-br from-white to-[#FFF5F2] p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_20px_50px_rgba(235,102,100,.12)] sm:p-7"
               >
-                <span className="text-5xl font-extrabold text-[#EB6664]/25">
+                <span className="text-3xl sm:text-4xl font-extrabold text-[#EB6664]/25">
                   {num}
                 </span>
                 <h3 className="mt-6 text-lg font-bold">{title}</h3>
@@ -300,8 +300,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#17243A] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#17243A] via-[#222A48] to-[#3E2B55] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-7 lg:gap-14 lg:grid-cols-2">
           <div>
             <Heading
               eyebrow="A closer look"
@@ -310,11 +310,11 @@ export default function Home() {
               light
             />
             <div className="mt-9">
-              <Button>Explore online tuition</Button>
+              <Button href="/tuitions">Explore online tuition</Button>
             </div>
           </div>
           <Reveal>
-            <div className="rounded-[28px] border border-white/20 bg-[#25334D] p-4 shadow-2xl">
+            <div className="rounded-[28px] border border-white/20 bg-white/[.08] p-4 shadow-[0_25px_75px_rgba(0,0,0,.3)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#FFB9AD]/40">
               <div className="mb-4 flex items-center justify-between text-xs text-white/60">
                 <span>Esperly classroom concept</span>
                 <span className="rounded-full bg-[#EB6664] px-3 py-1 text-white">
@@ -326,7 +326,7 @@ export default function Home() {
                   <p className="text-sm font-bold text-[#17243A]">
                     Let's solve it together
                   </p>
-                  <div className="text-center text-5xl font-extrabold text-[#EB6664]">
+                  <div className="text-center text-3xl sm:text-4xl font-extrabold text-[#EB6664]">
                     x + 8 = 15
                   </div>
                   <p className="text-xs text-slate-500">
@@ -348,16 +348,16 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
           <Reveal>
-            <div className="relative aspect-[5/4] overflow-hidden rounded-[36px] bg-[#FFF0EE]">
+            <div className="group relative aspect-[5/4] overflow-hidden rounded-[30px] border-[5px] border-white bg-[#FFF0EE] shadow-[0_25px_65px_rgba(23,36,58,.12)] sm:rounded-[36px]">
               <Image
                 src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1100&q=85"
                 alt="Students learning together"
                 fill
                 sizes="(max-width:1024px) 100vw,50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </Reveal>
@@ -378,7 +378,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#111827] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#111827] via-[#22283F] to-[#382A4A] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading
             eyebrow="Our philosophy"
@@ -387,7 +387,7 @@ export default function Home() {
             light
             center
           />
-          <div className="mx-auto mt-12 max-w-3xl rounded-[28px] border border-white/10 bg-white/5 p-10 text-center">
+          <div className="mx-auto mt-9 max-w-3xl rounded-[28px] border border-white/15 bg-white/[.07] p-6 text-center shadow-[0_25px_65px_rgba(0,0,0,.15)] backdrop-blur-xl sm:p-8 lg:p-10">
             <Heart className="mx-auto text-[#FFB8A6]" size={35} />
             <p className="mt-5 text-xl font-semibold leading-9 text-white">
               Confidence grows when learners feel seen, supported, and inspired
@@ -399,9 +399,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex items-end justify-between gap-5">
+          <div className="mb-9 flex flex-wrap items-end justify-between gap-5">
             <Heading
               eyebrow="The learning journal"
               title="Insights for smarter learning."
@@ -415,10 +415,10 @@ export default function Home() {
               <Link
                 key={a.slug}
                 href={"/resources/" + a.slug}
-                className="group rounded-[28px] border border-slate-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+                className="group overflow-hidden rounded-[26px] border border-[#EB6664]/10 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_20px_50px_rgba(235,102,100,.12)] sm:p-6"
               >
                 <div
-                  className={`mb-6 flex h-36 items-center justify-center rounded-2xl ${i % 2 ? "bg-[#F1EDFF]" : "bg-[#FFF0EE]"}`}
+                  className={`mb-6 flex h-32 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-[1.03] ${i % 2 ? "bg-[#F1EDFF]" : "bg-[#FFF0EE]"}`}
                 >
                   <BookOpen size={45} className="text-[#EB6664]" />
                 </div>
@@ -434,8 +434,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.8fr_1.2fr]">
+      <section className="bg-gradient-to-b from-white to-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-7 lg:gap-14 lg:grid-cols-[.8fr_1.2fr]">
           <Heading
             eyebrow="Good to know"
             title="Everything you need to know."
@@ -444,10 +444,10 @@ export default function Home() {
           <FAQ />
         </div>
       </section>
-      <section className="bg-gradient-to-r from-[#EB6664] via-[#F47F77] to-[#FFAA8F] px-5 py-24 text-center text-white lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#D95667] via-[#EB6664] to-[#FF9B81] px-4 py-12 text-center text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <Reveal className="mx-auto max-w-3xl">
           <Sparkles className="mx-auto mb-6" size={34} />
-          <h2 className="text-4xl font-extrabold tracking-[-.05em] md:text-6xl">
+          <h2 className="text-3xl sm:text-[2.125rem] font-extrabold tracking-[-.05em] md:text-5xl">
             Big dreams begin with the right guidance.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white/90">
@@ -455,7 +455,9 @@ export default function Home() {
             with confidence.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Button dark>Book a Free Demo</Button>
+            <Button href="/book-demo" dark>
+              Book a Free Demo
+            </Button>
             <Link
               href="/contact"
               className="inline-flex items-center rounded-full border border-white/60 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10"
@@ -465,7 +467,6 @@ export default function Home() {
           </div>
         </Reveal>
       </section>
-      <PageExperience />
     </>
   );
 }

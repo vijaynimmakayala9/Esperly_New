@@ -79,7 +79,7 @@ export default async function Page({ params }) {
         title={a.title}
         description="Practical ideas for a more confident, consistent learning journey."
       />
-      <article className="mx-auto max-w-3xl space-y-10 px-5 py-20">
+      <article className="mx-auto max-w-3xl space-y-10 px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         {content[slug].map(([h, t]) => (
           <section key={h}>
             <h2 className="text-2xl font-bold">{h}</h2>

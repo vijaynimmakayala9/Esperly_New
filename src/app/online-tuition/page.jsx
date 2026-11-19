@@ -9,7 +9,7 @@ export default function Page() {
         title="The classroom is wherever curiosity lives."
         description="Explore flexible online learning designed around the student, not the other way around."
       />
-      <section className="mx-auto max-w-7xl px-5 py-24">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <InfoGrid
           items={[
             [

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -199,20 +200,23 @@ export default function Navbar() {
         className={`sticky top-0 z-50 border-b border-slate-100/80 bg-white/90 backdrop-blur-xl transition-all ${scrolled ? "shadow-lg shadow-slate-900/5" : ""}`}
       >
         <div
-          className={`mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 transition-all lg:px-8 ${scrolled ? "h-[72px]" : "h-[84px]"}`}
+          className={`mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 transition-all lg:px-8 ${scrolled ? "h-[56px] sm:h-[60px]" : "h-[60px] sm:h-[68px]"}`}
         >
           <Link
             href="/"
             aria-label="Esperly home"
-            className="flex shrink-0 items-center gap-2.5"
+            className="flex shrink-0 items-center"
           >
-            <span className="flex h-10 w-10 -rotate-[9deg] items-center justify-center rounded-2xl bg-[#EB6664] text-white shadow-lg shadow-[#EB6664]/20">
-              <BookOpen size={22} />
-            </span>
-            <span className="text-[25px] font-extrabold tracking-[-.07em] text-[#17243A]">
-              esperly<span className="text-[#EB6664]">.</span>
-            </span>
+            <Image
+              src="/logo/logo1.png"
+              alt="Esperly - Learn, Practice, Grow"
+              width={180}
+              height={60}
+              priority
+              className="h-12 w-auto object-contain"
+            />
           </Link>
+
           <nav
             aria-label="Main navigation"
             className="hidden items-center gap-1 xl:flex"

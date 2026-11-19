@@ -11,7 +11,7 @@ export default function Page() {
         title="A learning journey starts with a conversation."
         description="Tell us a little about your child and the kind of learning support you're looking for."
       />
-      <section className="mx-auto max-w-3xl px-5 py-20">
+      <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <BookingForm />
       </section>
       <PageExperience />

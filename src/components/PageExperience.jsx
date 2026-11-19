@@ -1,17 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, useReducedMotion } from "motion/react";
+import ParallaxBanner from "./ParallaxBanner";
 import {
   ArrowUpRight,
   CheckCircle2,
-  BookOpen,
   Sparkles,
+  GraduationCap,
+  BookOpen,
   HeartHandshake,
   Target,
-  Layers3,
-  GraduationCap,
 } from "lucide-react";
 
 const pageContent = {
@@ -139,148 +140,195 @@ const pageContent = {
   ],
 };
 
-const reveal = {
-  initial: { opacity: 0, y: 26 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.12 },
-  transition: { duration: 0.55 },
-};
+const photos = [
+  "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
+  "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+  "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
+];
+const icons = [BookOpen, Target, HeartHandshake];
 
 export default function PageExperience() {
-  const path = usePathname();
-  const reduced = useReducedMotion();
-  const section = path.split("/").filter(Boolean)[0] || "programs";
+  const pathname = usePathname();
+  const reducedMotion = useReducedMotion();
+  const section = pathname?.split("/").filter(Boolean)[0] || "programs";
   const [headline, subtitle, points, summary] =
     pageContent[section] || pageContent.programs;
+  const reveal = (delay = 0) =>
+    reducedMotion
+      ? {}
+      : {
+          initial: { opacity: 0, y: 24 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, amount: 0.16 },
+          transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+        };
+
   return (
-    <div className="overflow-hidden">
-      <section className="relative bg-[#FFF9F6] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <motion.div {...(reduced ? {} : reveal)}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#EB6664]/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[.15em] text-[#D94E5B]">
+    <div className="w-full overflow-x-clip">
+      {/* Editorial learning experience — designed as a mid-page section */}
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#FFF9F6] via-white to-[#F8F4FF] px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-36 top-20 h-80 w-80 rounded-full bg-[#EB6664]/10 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-28 bottom-0 h-80 w-80 rounded-full bg-violet-300/20 blur-3xl"
+        />
+        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+          <motion.div {...reveal()}>
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#EB6664]/20 bg-white/85 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#D95359] shadow-sm">
               <Sparkles size={15} /> Learning, reimagined
             </span>
-            <h2 className="mt-6 max-w-xl text-4xl font-extrabold leading-[1.1] tracking-[-.05em] text-[#17243A] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-6 max-w-xl text-[clamp(2rem,3.7vw,3.5rem)] font-black leading-[1.12] tracking-[-0.05em] text-[#17243A]">
               {headline}
               <span className="text-[#EB6664]">.</span>
             </h2>
-            <p className="mt-6 max-w-lg text-base leading-8 text-slate-600">
+            <p className="mt-5 max-w-lg text-base leading-8 text-slate-600">
               {summary}
             </p>
-            <div className="mt-8 space-y-4">
+            <div className="mt-8 space-y-3">
               {points.map((point, i) => (
-                <div
+                <motion.div
                   key={point}
-                  className="group flex items-center gap-4 rounded-2xl border border-[#F4E6E2] bg-white/85 px-5 py-4 shadow-[0_12px_32px_rgba(23,36,58,.035)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  {...reveal(0.08 + i * 0.07)}
+                  className="group flex items-center gap-4 rounded-2xl border border-[#F0E3E3] bg-white/90 p-3.5 shadow-[0_8px_30px_rgba(23,36,58,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/30 hover:shadow-[0_14px_36px_rgba(23,36,58,0.09)] sm:px-5"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#FFF0EE] font-bold text-[#EB6664]">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FFF0EE] to-[#FFE0DA] text-sm font-black text-[#D95359]">
                     0{i + 1}
                   </span>
-                  <span className="font-semibold text-[#17243A]">{point}</span>
-                  <CheckCircle2 className="ml-auto size-5 text-[#EB6664]" />
-                </div>
+                  <span className="flex-1 text-sm font-semibold text-[#17243A] sm:text-base">
+                    {point}
+                  </span>
+                  <CheckCircle2 size={19} className="shrink-0 text-[#EB6664]" />
+                </motion.div>
               ))}
             </div>
+            <Link
+              href="/book-demo"
+              className="group mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#D95359] transition-colors hover:text-[#17243A]"
+            >
+              Discover your learning journey{" "}
+              <ArrowUpRight
+                size={17}
+                className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            </Link>
           </motion.div>
+
           <motion.div
-            {...(reduced ? {} : reveal)}
+            {...reveal(0.12)}
             className="relative mx-auto w-full max-w-[560px]"
           >
-            <div className="absolute -inset-5 rounded-[48px] bg-gradient-to-br from-[#FFDED8] via-[#F1EDFF] to-[#E5F8F1] blur-2xl" />
-            <div className="relative overflow-hidden rounded-[36px] border border-white bg-white p-5 shadow-[0_30px_90px_rgba(23,36,58,.1)] sm:p-8">
-              <div className="flex items-center justify-between gap-3">
-                <span className="flex items-center gap-2 text-sm font-bold text-[#17243A]">
-                  <span className="size-2.5 rounded-full bg-[#EB6664]" /> The
-                  Esperly experience
-                </span>
-                <span className="rounded-full bg-[#FFF0EE] px-3 py-1.5 text-[11px] font-semibold text-[#D94E5B]">
-                  Animated illustration
-                </span>
+            <div
+              aria-hidden="true"
+              className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-[#FFDDD8] via-[#EDE6FF] to-[#FFF5EE] opacity-80 blur-2xl"
+            />
+            <div className="group relative overflow-hidden rounded-[30px] border border-white/80 bg-white p-3 shadow-[0_30px_80px_rgba(23,36,58,0.12)] sm:p-4">
+              <div className="relative aspect-[5/4] overflow-hidden rounded-[22px] sm:aspect-[6/5]">
+                <Image
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1100&q=85"
+                  alt="Student studying with books and notes"
+                  fill
+                  sizes="(max-width:1024px) 90vw, 44vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-[#111C30]/75 via-transparent to-transparent"
+                />
+                <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 text-white sm:bottom-7 sm:left-7">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-[#EB6664] shadow-lg">
+                    <GraduationCap size={23} />
+                  </span>
+                  <div>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.15em] text-white/75">
+                      The Esperly experience
+                    </span>
+                    <span className="mt-1 block text-base font-bold sm:text-lg">
+                      Small steps. Big possibilities.
+                    </span>
+                  </div>
+                </div>
               </div>
-              <img
-                src={
-                  reduced
-                    ? "/animations/learning-cap-still.webp"
-                    : "/animations/learning-cap.gif"
-                }
-                alt="Animated coral graduation cap floating above an open book"
-                loading="lazy"
-                width="384"
-                height="384"
-                className="mx-auto my-4 aspect-square w-full max-w-[390px] rounded-3xl object-contain"
-              />
-              <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-[#FFF9F6] p-4">
-                <span className="flex items-center gap-2 text-sm font-bold text-[#17243A]">
-                  <GraduationCap size={18} className="text-[#EB6664]" /> Small
-                  steps. Big possibilities.
-                </span>
-                <Sparkles size={19} className="text-[#EB6664]" />
-              </div>
+            </div>
+            <div className="absolute -bottom-5 -right-2 hidden items-center gap-2 rounded-2xl border border-white bg-white px-4 py-3 text-sm font-bold text-[#17243A] shadow-[0_15px_40px_rgba(23,36,58,0.12)] sm:flex lg:-right-6">
+              <span className="flex size-9 items-center justify-center rounded-xl bg-[#FFF0EE] text-[#EB6664]">
+                <Sparkles size={18} />
+              </span>
+              Learning with purpose
             </div>
           </motion.div>
         </div>
       </section>
-      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+
+      {/* Supporting feature cards */}
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto w-full max-w-7xl">
-          <div className="mb-12 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-[.2em] text-[#EB6664]">
-              Explore the experience
+          <motion.div {...reveal()} className="mb-10 max-w-2xl sm:mb-12">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.19em] text-[#D95359]">
+              <span className="h-px w-7 bg-[#EB6664]" /> Explore the experience
             </span>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-.05em] text-[#17243A] sm:text-5xl">
+            <h2 className="mt-4 text-[clamp(1.9rem,3.2vw,3rem)] font-black leading-tight tracking-[-0.045em] text-[#17243A]">
               {subtitle}
             </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
+            <p className="mt-4 text-sm leading-7 text-slate-500 sm:text-base">
+              Thoughtful learning experiences built around curiosity, clarity,
+              and steady progress.
+            </p>
+          </motion.div>
+          <div className="grid gap-5 md:grid-cols-3 lg:gap-6">
             {points.map((point, i) => {
-              const Icon = [BookOpen, Target, HeartHandshake][i];
+              const Icon = icons[i % icons.length];
               return (
-                <motion.div
+                <motion.article
                   key={point}
-                  {...(reduced ? {} : reveal)}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="group relative overflow-hidden rounded-[28px] border border-slate-100 bg-gradient-to-br from-white to-[#FFF9F6] p-8 shadow-sm transition-all hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-xl"
+                  {...reveal(i * 0.09)}
+                  className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#ECE7E8] bg-white p-3 shadow-[0_10px_35px_rgba(23,36,58,0.045)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(23,36,58,0.1)] sm:p-4"
                 >
-                  <span className="flex size-14 items-center justify-center rounded-2xl bg-[#FFF0EE] text-[#EB6664] transition-transform group-hover:rotate-6 group-hover:scale-110">
-                    <Icon size={26} />
-                  </span>
-                  <span className="mt-8 block text-xs font-bold tracking-[.2em] text-[#EB6664]">
-                    0{i + 1} / ESPERLY
-                  </span>
-                  <h3 className="mt-3 text-2xl font-extrabold tracking-tight text-[#17243A]">
-                    {point}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-500">
-                    A thoughtful part of the learning experience, designed to
-                    support confidence and curiosity.
-                  </p>
-                </motion.div>
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-[18px]">
+                    <Image
+                      src={photos[i % photos.length]}
+                      alt={point}
+                      fill
+                      sizes="(max-width:768px) 90vw, 32vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <span className="absolute left-3 top-3 flex size-10 items-center justify-center rounded-xl border border-white/70 bg-white/90 text-[#EB6664] shadow-sm backdrop-blur-md">
+                      <Icon size={19} />
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col px-2 pb-3 pt-6 sm:px-3">
+                    <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#EB6664]">
+                      0{i + 1} / ESPERLY
+                    </span>
+                    <h3 className="mt-3 text-xl font-extrabold leading-snug tracking-[-0.03em] text-[#17243A]">
+                      {point}
+                    </h3>
+                    <p className="mt-3 flex-1 text-sm leading-7 text-slate-500">
+                      A thoughtful part of the learning experience, designed to
+                      support confidence and curiosity.
+                    </p>
+                    <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
+                      <span className="text-xs font-semibold text-slate-400">
+                        Learn • Practice • Grow
+                      </span>
+                      <span className="flex size-9 items-center justify-center rounded-full bg-[#FFF0EE] text-[#EB6664] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#EB6664] group-hover:text-white">
+                        <ArrowUpRight size={17} />
+                      </span>
+                    </div>
+                  </div>
+                </motion.article>
               );
             })}
           </div>
         </div>
       </section>
-      <section className="bg-[#17243A] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[.2em] text-[#FFB8A6]">
-              The next chapter
-            </span>
-            <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">
-              A more inspiring way to keep learning.
-            </h2>
-            <p className="mt-3 max-w-xl text-slate-300">
-              Explore the learning options and find the next step that works for
-              your family.
-            </p>
-          </div>
-          <Link
-            href="/book-demo"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#EB6664] px-7 py-4 font-bold text-white transition-all hover:-translate-y-1 hover:bg-[#D94E5B]"
-          >
-            Explore a free demo <ArrowUpRight size={19} />
-          </Link>
-        </div>
-      </section>
+
+      <ParallaxBanner
+        title="More wonder in every lesson."
+        description="Make space for curiosity, creativity, and confident learning."
+      />
     </div>
   );
 }
