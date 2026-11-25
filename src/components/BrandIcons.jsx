@@ -66,3 +66,10 @@ export const Users = make("Users");
 export const Video = make("Video");
 export const WandSparkles = make("WandSparkles");
 export const X = make("X");
+
+shapes.Calculator = <><rect x="4" y="2" width="16" height="20" rx="3" fill={P}/><rect x="7" y="5" width="10" height="5" rx="1" fill="white"/><path d="M8 14H10M14 14H16M8 18H10M14 18H16" stroke={N}/></>;
+shapes.FlaskConical = <><path d="M9 3H15M10 3V10L4 19Q3 22 7 22H17Q21 22 20 19L14 10V3" fill="white"/><path d="M7 15H17L20 20Q20 22 17 22H7Q4 22 4 20Z" fill={L}/><circle cx="12" cy="18" r="1" fill={C}/></>;
+shapes.Leaf = shapes.Sprout;
+export const Calculator = make("Calculator");
+export const FlaskConical = make("FlaskConical");
+export const Leaf = make("Leaf");

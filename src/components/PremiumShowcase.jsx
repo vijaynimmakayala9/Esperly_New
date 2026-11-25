@@ -1,5 +1,6 @@
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import {
@@ -97,7 +98,7 @@ export default function PremiumShowcase() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: reduced ? 0 : i * 0.1 }}
-                className="group relative flex items-center gap-4 overflow-hidden rounded-[22px] border border-[#EFDCD8] bg-white/90 p-4 shadow-[0_10px_35px_rgba(23,36,58,0.035)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-[#EB6664]/40 hover:shadow-[0_20px_48px_rgba(235,102,100,0.10)] sm:p-5"
+                className={`group relative flex items-center gap-4 overflow-hidden rounded-[22px] border ${cardTheme(i)} p-4 shadow-[0_10px_35px_rgba(23,36,58,0.035)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-[#EB6664]/40 hover:shadow-[0_20px_48px_rgba(235,102,100,0.10)] sm:p-5`}
               >
                 <div
                   aria-hidden="true"

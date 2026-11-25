@@ -1,6 +1,7 @@
 
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import {
@@ -14,6 +15,9 @@ import {
   Users,
   CheckCircle2,
   Sparkles,
+  Calculator,
+  FlaskConical,
+  Leaf,
 } from "@/components/BrandIcons";
 
 import AnimatedIcon from "./AnimatedIcon";
@@ -202,7 +206,7 @@ export function ProgramCard({ item, index = 0 }) {
       <Link
         href={`/programs/${item.slug}`}
         aria-label={`Explore ${item.title}`}
-        className={`group relative isolate flex h-full min-h-[300px] flex-col overflow-hidden rounded-[30px] border border-[#F0E5E1] bg-white p-6 shadow-[0_12px_40px_rgba(23,36,58,0.045)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_24px_65px_rgba(235,102,100,0.13)] sm:p-8 ${focusRing}`}
+        className={`group relative isolate flex h-full min-h-[300px] flex-col overflow-hidden rounded-[30px] border ${cardTheme(index)} p-6 shadow-[0_12px_40px_rgba(23,36,58,0.045)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_24px_65px_rgba(235,102,100,0.13)] sm:p-8 ${focusRing}`}
       >
         {/* Subtle hover background */}
         <div
@@ -261,20 +265,21 @@ export function ProgramCard({ item, index = 0 }) {
 -------------------------------------------- */
 
 export function SubjectCard({ item }) {
+  const SubjectIcon = ({ mathematics: Calculator, science: Atom, english: BookOpen, physics: Atom, chemistry: FlaskConical, biology: Leaf })[item.slug] || BookOpen;
   return (
     <Link
       href={`/subjects/${item.slug}`}
       aria-label={`Explore ${item.title}`}
-      className={`group relative flex min-h-[126px] items-center gap-4 overflow-hidden rounded-[26px] border border-[#F0E8E5] bg-white p-5 shadow-[0_8px_30px_rgba(23,36,58,0.035)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#EB6664]/35 hover:shadow-[0_18px_45px_rgba(235,102,100,0.1)] sm:gap-5 sm:p-6 ${focusRing}`}
+      className={`group relative flex min-h-[126px] items-center gap-4 overflow-hidden rounded-[26px] border ${cardTheme(item.slug)} p-5 shadow-[0_8px_30px_rgba(23,36,58,0.035)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#EB6664]/35 hover:shadow-[0_18px_45px_rgba(235,102,100,0.1)] sm:gap-5 sm:p-6 ${focusRing}`}
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#FFF2EF]/0 via-[#FFF2EF]/30 to-[#FFF2EF]/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#FFF2EF]/0 via-[#FFF2EF]/30 to-[#FFF2EF]/80 opacity-0 transition-opacity duration-500 group-hover:opacity-30"
       />
 
       <span className="relative flex h-[66px] w-[66px] shrink-0 items-center justify-center rounded-[20px] border border-[#FFE5DF] bg-gradient-to-br from-[#FFF5F2] to-[#FFE8E2] shadow-[0_6px_18px_rgba(235,102,100,0.07)]">
         <span className="text-[30px] leading-none transition-transform duration-500 group-hover:-rotate-12 group-hover:scale-125">
-          {item.emoji}
+          <SubjectIcon size={32} />
         </span>
       </span>
 

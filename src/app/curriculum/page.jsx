@@ -1,3 +1,4 @@
+import { cardTheme } from "@/lib/cardThemes";
 import PageExperience from "@/components/PageExperience";
 import Link from "next/link";
 import { curricula } from "@/data/site";
@@ -12,11 +13,11 @@ export default function Page() {
         description="Explore proposed curriculum pathways. Please confirm which boards and grades Esperly currently supports."
       />
       <section className="mx-auto grid max-w-7xl gap-5 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 sm:grid-cols-2 lg:grid-cols-3">
-        {curricula.map((c) => (
+        {curricula.map((c, i) => (
           <Link
             key={c.slug}
             href={"/curriculum/" + c.slug}
-            className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-7 transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.01] hover:border-[#EB6664]/35 hover:shadow-xl"
+            className={`rounded-3xl border ${cardTheme(i)} p-5 sm:p-7 transition-all duration-500 hover:-translate-y-1.5 hover:scale-[1.01] hover:border-[#EB6664]/35 hover:shadow-xl`}
           >
             <span className="text-xs font-bold text-[#EB6664]">CURRICULUM</span>
             <h2 className="mt-4 text-2xl sm:text-[1.75rem] font-bold">

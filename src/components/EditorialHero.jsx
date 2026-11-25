@@ -51,7 +51,7 @@ export default function EditorialHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate w-full overflow-hidden bg-gradient-to-br from-[#FFF9F6] via-[#FFFCFA] to-[#F6F1FF]"
+      className="relative isolate w-full overflow-hidden bg-gradient-to-br from-[#FFE9DF] via-[#FFF9F6] to-[#E4E9FF]"
     >
       {/* Background glow */}
       <motion.div

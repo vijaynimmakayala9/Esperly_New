@@ -1,5 +1,6 @@
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import { motion, useReducedMotion } from "motion/react";
 import EducationArt from "./EducationArt";
 import ParallaxBanner from "./ParallaxBanner";
@@ -259,7 +260,7 @@ export default function PremiumDetail({ type, item, items, description }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className={`group rounded-[26px] border p-5 sm:p-6 shadow-[0_14px_35px_rgba(23,36,58,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-[#EB6664]/40 hover:shadow-[0_24px_55px_rgba(235,102,100,.13)] ${i % 2 ? "border-[#E7E3FF] bg-gradient-to-br from-white to-[#F7F4FF]" : "border-[#F7E2DD] bg-gradient-to-br from-white to-[#FFF5F2]"}`}
+                className={`group rounded-[26px] border p-5 sm:p-6 shadow-[0_14px_35px_rgba(23,36,58,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-[#EB6664]/40 hover:shadow-[0_24px_55px_rgba(235,102,100,.13)] ${cardTheme(i)}`}
               >
                 <div className="flex size-14 items-center justify-center rounded-2xl border border-white bg-white text-[#EB6664] shadow-md transition-transform group-hover:rotate-6 group-hover:scale-110">
                   <CardIcon size={27} />
@@ -304,7 +305,7 @@ export default function PremiumDetail({ type, item, items, description }) {
             {["Understand", "Explore", "Practice", "Grow"].map((x, i) => (
               <div
                 key={x}
-                className="rounded-[24px] border border-white/15 bg-white/[0.08] p-5 shadow-[0_16px_45px_rgba(0,0,0,.12)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FFB8A6]/50 hover:bg-white/[0.14] sm:p-6"
+                className="rounded-[24px] border border-white/15 bg-gradient-to-br from-[#39345E] to-[#242D49] p-5 shadow-[0_16px_45px_rgba(0,0,0,.12)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FFB8A6]/50 hover:bg-white/[0.14] sm:p-6"
               >
                 <div className="text-3xl sm:text-[2.125rem] font-black text-[#FFB8A6]">
                   0{i + 1}
@@ -344,7 +345,7 @@ export default function PremiumDetail({ type, item, items, description }) {
                 <Link
                   key={x.slug}
                   href={`/${type}/${x.slug}`}
-                  className="group rounded-[26px] border border-[#F4E2DE] bg-white p-6 shadow-[0_12px_36px_rgba(23,36,58,.06)] transition-all hover:-translate-y-2 hover:border-[#EB6664]/50 hover:shadow-xl"
+                  className={`group rounded-[26px] border ${cardTheme(i)} p-6 shadow-[0_12px_36px_rgba(23,36,58,.06)] transition-all hover:-translate-y-2 hover:border-[#EB6664]/50 hover:shadow-xl`}
                 >
                   <span
                     className={`inline-flex size-12 items-center justify-center rounded-2xl ${i === 1 ? "bg-[#F1EDFF] text-[#7B66B8]" : "bg-[#FFF0EE] text-[#EB6664]"}`}

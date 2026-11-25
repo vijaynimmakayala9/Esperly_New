@@ -1,5 +1,6 @@
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
@@ -166,7 +167,7 @@ export function PhotoCards({ eyebrow, title, items = [] }) {
                 ...reveal.transition,
                 delay: reduced ? 0 : Math.min(i, 5) * 0.07,
               }}
-              className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#F0E8E7] bg-[#FFFCFA] shadow-[0_12px_32px_rgba(23,36,58,.045)] transition-[border-color,box-shadow] duration-300 hover:border-[#EB6664]/35 hover:shadow-[0_22px_55px_rgba(23,36,58,.11)]"
+              className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] border ${cardTheme(i)} shadow-[0_12px_32px_rgba(23,36,58,.045)] transition-[border-color,box-shadow] duration-300 hover:border-[#EB6664]/35 hover:shadow-[0_22px_55px_rgba(23,36,58,.11)]`}
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-[#F8F0EE]">
                 <Image

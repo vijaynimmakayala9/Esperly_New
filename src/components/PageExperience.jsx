@@ -1,5 +1,6 @@
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -192,7 +193,7 @@ export default function PageExperience() {
                 <motion.div
                   key={point}
                   {...reveal(0.08 + i * 0.07)}
-                  className="group flex items-center gap-4 rounded-2xl border border-[#F0E3E3] bg-white/90 p-3.5 shadow-[0_8px_30px_rgba(23,36,58,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/30 hover:shadow-[0_14px_36px_rgba(23,36,58,0.09)] sm:px-5"
+                  className={`group flex items-center gap-4 rounded-2xl border ${cardTheme(i)} p-3.5 shadow-[0_8px_30px_rgba(23,36,58,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/30 hover:shadow-[0_14px_36px_rgba(23,36,58,0.09)] sm:px-5`}
                 >
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FFF0EE] to-[#FFE0DA] text-sm font-black text-[#D95359]">
                     0{i + 1}
@@ -284,7 +285,7 @@ export default function PageExperience() {
                 <motion.article
                   key={point}
                   {...reveal(i * 0.09)}
-                  className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#ECE7E8] bg-white p-3 shadow-[0_10px_35px_rgba(23,36,58,0.045)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(23,36,58,0.1)] sm:p-4"
+                  className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] border ${cardTheme(i)} p-3 shadow-[0_10px_35px_rgba(23,36,58,0.045)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(23,36,58,0.1)] sm:p-4`}
                 >
                   <div className="relative aspect-[16/10] overflow-hidden rounded-[18px]">
                     <Image

@@ -83,7 +83,7 @@ function DesktopDropdown({ menu, close }) {
               ))}
             </div>
             {active && (
-              <div className="min-w-[190px] border-l border-[#EB6664]/10 bg-[#FFFCFA] py-2">
+              <div className="min-w-[190px] border-l border-[#EB6664]/10 bg-gradient-to-br from-[#F1EDFF] via-[#FFF9F6] to-[#E8F8F2] py-2">
                 {groups
                   .find((group) => group.label === active)
                   ?.items.map((item) => (
@@ -382,7 +382,7 @@ export default function Navbar() {
                     />
                   </button>
                   {expanded === menu.id && (
-                    <div className="mb-3 rounded-xl border border-[#EB6664]/10 bg-[#FFF9F6] p-2">
+                    <div className="mb-3 rounded-xl border border-[#EB6664]/10 bg-gradient-to-br from-[#FFF0EE] to-[#F1EDFF] p-2">
                       {menu.groups
                         ? menu.groups.map((group) => (
                             <div key={group.label}>

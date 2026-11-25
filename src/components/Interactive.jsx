@@ -1,5 +1,6 @@
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import { Children, useId, useRef, useState } from "react";
 import Link from "next/link";
 import {
@@ -23,7 +24,7 @@ const inputClass =
   "w-full min-h-12 rounded-2xl border border-[#E9E5E8] bg-white/90 px-4 py-3 text-sm text-[#17243A] shadow-sm outline-none transition-all duration-300 placeholder:text-slate-400 hover:border-[#EB6664]/35 focus:border-[#EB6664] focus:ring-4 focus:ring-[#EB6664]/10";
 const labelClass = "mb-2 block text-xs font-bold tracking-wide text-[#34415B]";
 const revealCard =
-  "border border-[#EB6664]/10 bg-white shadow-[0_14px_40px_rgba(23,36,58,.045)] transition-all duration-300 hover:border-[#EB6664]/30 hover:shadow-[0_22px_55px_rgba(23,36,58,.09)]";
+  "border shadow-[0_14px_40px_rgba(23,36,58,.045)] transition-all duration-300 hover:border-[#EB6664]/30 hover:shadow-[0_22px_55px_rgba(23,36,58,.09)]";
 
 export function FAQ({ items = faqs }) {
   const [active, setActive] = useState(0);
@@ -35,7 +36,7 @@ export function FAQ({ items = faqs }) {
         return (
           <div
             key={`${f.q}-${i}`}
-            className={`group overflow-hidden rounded-[22px] ${revealCard} ${open ? "border-[#EB6664]/35 bg-gradient-to-br from-[#FFF9F7] to-white" : ""}`}
+            className={`group overflow-hidden rounded-[22px] ${revealCard} ${cardTheme(i)} ${open ? "ring-1 ring-[#EB6664]/35" : ""}`}
           >
             <h3>
               <button
@@ -535,11 +536,11 @@ export function SearchFilter({ items = [], kind = "programs" }) {
             <Link
               key={`${item.slug}-${i}`}
               href={`/${kind}/${item.slug}`}
-              className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] p-6 sm:p-7 ${revealCard} hover:-translate-y-1.5`}
+              className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] p-6 sm:p-7 ${revealCard} ${cardTheme(i)} hover:-translate-y-1.5`}
             >
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#FFF7F4] via-white to-[#F8F5FF] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#FFF7F4] via-white to-[#F8F5FF] opacity-0 transition-opacity duration-300 group-hover:opacity-30"
               />
               <div className="relative flex items-center justify-between">
                 <span className="rounded-full bg-[#FFF0EE] px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.13em] text-[#D95359]">

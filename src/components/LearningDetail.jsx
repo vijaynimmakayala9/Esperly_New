@@ -1,5 +1,6 @@
 "use client";
 
+import { cardTheme } from "@/lib/cardThemes";
 import { motion, useReducedMotion } from "motion/react";
 import TuitionBooking from "./TuitionBooking";
 import ParallaxBanner from "./ParallaxBanner";
@@ -437,7 +438,7 @@ export default function LearningDetail({
                 delay: reduceMotion ? 0 : Math.min(i * 0.08, 0.4),
               }}
               key={topic}
-              className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/15 bg-gradient-to-br from-white via-[#FFFCFA] to-[#FFF1EE] p-6 shadow-[0_14px_40px_rgba(23,36,58,.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_25px_65px_rgba(235,102,100,.15)] sm:p-7"
+              className={`group relative overflow-hidden rounded-[26px] border ${cardTheme(i)} p-6 shadow-[0_14px_40px_rgba(23,36,58,.06)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_25px_65px_rgba(235,102,100,.15)] sm:p-7`}
             >
               <div className="flex items-center justify-between">
                 <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FFE4DE] to-[#F4E9FF] text-[#D65557]">
@@ -510,7 +511,7 @@ export default function LearningDetail({
                   duration: 0.5,
                   delay: reduceMotion ? 0 : i * 0.1,
                 }}
-                className="group flex gap-4 rounded-[24px] border border-white/15 bg-white/[.07] p-5 shadow-[0_15px_45px_rgba(0,0,0,.1)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FFB5AA]/40 hover:bg-white/[.12] sm:p-6"
+                className="group flex gap-4 rounded-[24px] border border-white/15 bg-gradient-to-br from-[#304A69] to-[#242D49] p-5 shadow-[0_15px_45px_rgba(0,0,0,.1)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FFB5AA]/40 hover:bg-white/[.12] sm:p-6"
               >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EB6664]/20 text-[#FFB5AA]">
                   {i === 0 ? (
@@ -550,7 +551,7 @@ export default function LearningDetail({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: reduceMotion ? 0 : i * 0.07 }}
-              className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/15 bg-gradient-to-br from-white via-[#FFFBF9] to-[#FFF0EE] p-6 shadow-[0_12px_35px_rgba(23,36,58,.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#EB6664]/40 hover:shadow-[0_20px_55px_rgba(235,102,100,.12)] sm:p-7"
+              className={`group relative overflow-hidden rounded-[26px] border ${cardTheme(i)} p-6 shadow-[0_12px_35px_rgba(23,36,58,.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#EB6664]/40 hover:shadow-[0_20px_55px_rgba(235,102,100,.12)] sm:p-7`}
             >
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EB6664] text-lg font-black text-white">
                 {String(i + 1).padStart(2, "0")}
@@ -587,7 +588,7 @@ export default function LearningDetail({
             ].map((outcome) => (
               <div
                 key={outcome}
-                className="group flex items-center gap-3 rounded-2xl border border-white/90 bg-white/85 p-4 text-sm font-semibold shadow-[0_10px_30px_rgba(23,36,58,.06)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/30 hover:shadow-lg sm:p-5"
+                className={`group flex items-center gap-3 rounded-2xl border ${cardTheme(outcome)} p-4 text-sm font-semibold shadow-[0_10px_30px_rgba(23,36,58,.06)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/30 hover:shadow-lg sm:p-5`}
               >
                 <CheckCircle2 size={20} className="shrink-0 text-[#EB6664]" />
                 {outcome}
@@ -619,7 +620,7 @@ export default function LearningDetail({
             {info.faqs.map(([question, answer]) => (
               <details
                 key={question}
-                className="group rounded-[20px] border border-[#EDE5E8] bg-gradient-to-r from-white to-[#FFFAF9] p-5 shadow-[0_8px_25px_rgba(23,36,58,.04)] transition-all duration-300 open:border-[#EB6664]/40 open:shadow-[0_14px_35px_rgba(235,102,100,.09)]"
+                className={`group rounded-[20px] border ${cardTheme(question)} p-5 shadow-[0_8px_25px_rgba(23,36,58,.04)] transition-all duration-300 open:border-[#EB6664]/40 open:shadow-[0_14px_35px_rgba(235,102,100,.09)]`}
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold marker:hidden">
                   {question}
@@ -652,7 +653,7 @@ export default function LearningDetail({
               <Link
                 key={href}
                 href={href}
-                className="group flex items-center justify-between gap-4 rounded-[22px] border border-[#F2DFDD] bg-gradient-to-br from-white to-[#FFF6F3] p-5 font-bold shadow-[0_10px_30px_rgba(23,36,58,.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#EB6664]/45 hover:shadow-[0_20px_45px_rgba(235,102,100,.12)] sm:p-6"
+                className={`group flex items-center justify-between gap-4 rounded-[22px] border ${cardTheme(href)} p-5 font-bold shadow-[0_10px_30px_rgba(23,36,58,.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#EB6664]/45 hover:shadow-[0_20px_45px_rgba(235,102,100,.12)] sm:p-6`}
               >
                 {relatedTitle}
                 <ArrowUpRight

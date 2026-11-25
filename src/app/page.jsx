@@ -1,3 +1,4 @@
+import { cardTheme } from "@/lib/cardThemes";
 import EducationArt from "@/components/EducationArt";
 import PremiumShowcase from "@/components/PremiumShowcase";
 import AnimatedIcon from "@/components/AnimatedIcon";
@@ -45,10 +46,10 @@ export default function Home() {
             [Clock, "Flexible schedules"],
             [Target, "Goal-led lessons"],
             [Heart, "Confidence first"],
-          ].map(([Icon, label]) => (
+          ].map(([Icon, label], i) => (
             <div
               key={label}
-              className="group flex min-w-0 flex-col items-center justify-center gap-3 rounded-2xl border border-[#EB6664]/10 bg-white/80 px-3 py-5 text-xs font-semibold text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/25 hover:shadow-[0_14px_35px_rgba(235,102,100,.12)] sm:text-sm"
+              className={`group flex min-w-0 flex-col items-center justify-center gap-3 rounded-2xl border ${cardTheme(i)} px-3 py-5 text-xs font-semibold text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#EB6664]/25 hover:shadow-[0_14px_35px_rgba(235,102,100,.12)] sm:text-sm`}
             >
               <AnimatedIcon
                 icon={Icon.displayName || Icon.name}
@@ -103,7 +104,7 @@ export default function Home() {
               <Reveal
                 key={title}
                 delay={i * 0.06}
-                className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/10 bg-white/95 p-5 shadow-[0_8px_30px_rgba(23,36,58,.04)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:bg-gradient-to-br hover:from-white hover:to-[#FFF1EE] hover:shadow-[0_24px_55px_rgba(235,102,100,.14)] sm:p-7"
+                className={`group relative overflow-hidden rounded-[26px] border ${cardTheme(i)} p-5 shadow-[0_8px_30px_rgba(23,36,58,.04)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(235,102,100,.14)] sm:p-7`}
               >
                 <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FFE7DF] to-[#F5E9FF] text-[#EB6664] shadow-sm transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
                   <AnimatedIcon
@@ -125,10 +126,10 @@ export default function Home() {
             ["book", "Explore ideas", "Animated learning moments"],
             ["science", "Discover more", "Curiosity-led subjects"],
             ["progress", "Celebrate growth", "Progress worth noticing"],
-          ].map(([name, title, desc]) => (
+          ].map(([name, title, desc], i) => (
             <div
               key={name}
-              className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/15 bg-white p-5 text-center shadow-[0_8px_25px_rgba(23,36,58,.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_25px_60px_rgba(235,102,100,.16)] sm:p-7"
+              className={`group relative overflow-hidden rounded-[26px] border ${cardTheme(i)} p-5 text-center shadow-[0_8px_25px_rgba(23,36,58,.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_25px_60px_rgba(235,102,100,.16)] sm:p-7`}
             >
               <EducationArt
                 name={name}
@@ -288,7 +289,7 @@ export default function Home() {
             ].map(([num, title, desc]) => (
               <Reveal
                 key={num}
-                className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/10 bg-gradient-to-br from-white to-[#FFF5F2] p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_20px_50px_rgba(235,102,100,.12)] sm:p-7"
+                className={`group relative overflow-hidden rounded-[26px] border ${cardTheme(Number(num)-1)} p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_20px_50px_rgba(235,102,100,.12)] sm:p-7`}
               >
                 <span className="text-3xl sm:text-4xl font-extrabold text-[#EB6664]/25">
                   {num}
@@ -415,7 +416,7 @@ export default function Home() {
               <Link
                 key={a.slug}
                 href={"/resources/" + a.slug}
-                className="group overflow-hidden rounded-[26px] border border-[#EB6664]/10 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_20px_50px_rgba(235,102,100,.12)] sm:p-6"
+                className={`group overflow-hidden rounded-[26px] border ${cardTheme(i)} p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_20px_50px_rgba(235,102,100,.12)] sm:p-6`}
               >
                 <div
                   className={`mb-6 flex h-32 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-[1.03] ${i % 2 ? "bg-[#F1EDFF]" : "bg-[#FFF0EE]"}`}

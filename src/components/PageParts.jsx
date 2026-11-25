@@ -1,3 +1,4 @@
+import { cardTheme } from "@/lib/cardThemes";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -150,12 +151,12 @@ export function InfoGrid({ items = [] }) {
           <Reveal
             key={`${title}-${i}`}
             delay={i * 0.08}
-            className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#EAE6E8] bg-white p-6 shadow-[0_12px_35px_rgba(23,36,58,0.035)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(23,36,58,0.09)] sm:p-8"
+            className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] border ${cardTheme(i)} p-6 shadow-[0_12px_35px_rgba(23,36,58,0.035)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(23,36,58,0.09)] sm:p-8`}
           >
             {/* Hover gradient */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#FFF6F3] via-white to-[#F9F5FF] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#FFF6F3] via-white to-[#F9F5FF] opacity-0 transition-opacity duration-500 group-hover:opacity-30"
             />
 
             {/* Icon */}
