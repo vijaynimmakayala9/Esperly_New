@@ -11,7 +11,7 @@ export default function Page() {
         title="Helpful ideas for curious minds."
         description="Thoughtful resources for parents and learners, from everyday study habits to academic confidence."
       />
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <SearchFilter items={articles} kind="resources" />
       </section>
       <PageExperience />

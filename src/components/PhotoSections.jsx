@@ -57,7 +57,7 @@ export function PhotoHero({
         aria-hidden="true"
         className="pointer-events-none absolute -right-24 bottom-0 size-80 rounded-full bg-violet-300/15 blur-3xl"
       />
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1.02fr_.98fr] lg:gap-16 lg:py-24">
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 py-14 sm:py-20 lg:grid-cols-[1.02fr_.98fr] lg:gap-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <motion.div
           {...(reduced ? {} : reveal)}
           className="relative z-10 max-w-xl"
@@ -145,7 +145,7 @@ export function PhotoCards({ eyebrow, title, items = [] }) {
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 top-0 size-96 rounded-full bg-[#FFF0EE] blur-3xl"
       />
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto w-full max-w-7xl">
         <motion.div {...(reduced ? {} : reveal)} className="max-w-3xl">
           {eyebrow && (
             <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[.18em] text-[#D95457]">
@@ -235,7 +235,7 @@ export function PhotoStrip({
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-[#101827]/45 via-transparent to-[#EB6664]/10" />
       <motion.div
         {...(reduced ? {} : reveal)}
-        className="relative mx-auto w-full max-w-7xl px-5 sm:px-8"
+        className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-extrabold uppercase tracking-[.16em] text-[#FFB9AC] backdrop-blur-lg">
           <Sparkles size={14} /> The Esperly approach

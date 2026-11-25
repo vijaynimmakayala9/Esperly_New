@@ -41,7 +41,7 @@ export default function Page() {
           },
         ]}
       />
-      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
         <h2 className="mb-7 text-2xl font-extrabold text-[#17243A] sm:text-3xl">
           Browse all resources
         </h2>

@@ -40,8 +40,8 @@ export default function Home() {
   return (
     <>
       <EditorialHero />
-      <section className="relative overflow-hidden border-y border-[#EB6664]/10 bg-gradient-to-r from-white via-[#FFF8F6] to-white px-4 py-7 sm:px-6 sm:py-9 lg:px-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 text-center sm:gap-4 md:grid-cols-5">
+      <section className="relative overflow-hidden border-y border-[#EB6664]/10 bg-gradient-to-r from-white via-[#FFF8F6] to-white py-7 sm:py-9">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-3 text-center sm:gap-4 md:grid-cols-5 px-4 sm:px-6 lg:px-8">
           {[
             [Users, "Personal attention"],
             [Video, "Interactive classes"],
@@ -63,8 +63,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#EAF4FF] to-[#F5F0FF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#EAF4FF] to-[#F5F0FF] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <Heading
             eyebrow="The Esperly difference"
             title="More than tuition. A better way to learn."
@@ -122,8 +122,8 @@ export default function Home() {
         </div>
       </section>
       <PremiumShowcase />
-      <section className="bg-gradient-to-b from-white via-[#E8FAF2] to-[#F5FCFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-3">
+      <section className="bg-gradient-to-b from-white via-[#E8FAF2] to-[#F5FCFF] py-12 sm:py-16">
+        <div className="mx-auto grid w-full max-w-7xl gap-5 sm:grid-cols-3 px-4 sm:px-6 lg:px-8">
           {[
             ["book", "Explore ideas", "Animated learning moments"],
             ["science", "Discover more", "Curiosity-led subjects"],
@@ -145,8 +145,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFE5DC] via-[#FFF4D9] to-[#E8DEFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFE5DC] via-[#FFF4D9] to-[#E8DEFF] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
             <Heading
               eyebrow="Find your path"
@@ -167,7 +167,7 @@ export default function Home() {
       <ParallaxStory />
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#101827] via-[#1E2943] to-[#452C56] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="pointer-events-none absolute -right-20 -top-24 h-96 w-96 rounded-full bg-[#EB6664]/25 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
+        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
           <Reveal>
             <div className="rounded-[30px] border border-white/20 bg-white/[.09] p-4 shadow-[0_30px_80px_rgba(0,0,0,.25)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#FFB9AD]/40 sm:p-6">
               <div className="mb-6 flex items-center justify-between">
@@ -241,8 +241,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFF4D9] to-[#FFF0EE] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFF4D9] to-[#FFF0EE] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
             <Heading
               eyebrow="Explore subjects"
@@ -260,8 +260,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-white via-[#F0E9FF] to-[#EAF4FF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-gradient-to-b from-white via-[#F0E9FF] to-[#EAF4FF] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <Heading
             eyebrow="Simple by design"
             title="Your journey starts in four easy steps."
@@ -304,8 +304,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#17243A] via-[#222A48] to-[#3E2B55] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-7 lg:gap-14 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#17243A] via-[#222A48] to-[#3E2B55] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-7 lg:gap-14 lg:grid-cols-2 px-4 sm:px-6 lg:px-8">
           <div>
             <Heading
               eyebrow="A closer look"
@@ -352,8 +352,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#EAF4FF] to-[#F5F0FF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#EAF4FF] to-[#F5F0FF] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2 px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="group relative aspect-[5/4] overflow-hidden rounded-[30px] border-[5px] border-white bg-[#FFF0EE] shadow-[0_25px_65px_rgba(23,36,58,.12)] sm:rounded-[36px]">
               <ParallaxImage
@@ -383,8 +383,8 @@ export default function Home() {
         </div>
       </section>
       <ParallaxBanner image="/images/learning-parallax.webp" title="A little progress. A world of possibility." />
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#111827] via-[#22283F] to-[#382A4A] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#111827] via-[#22283F] to-[#382A4A] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <Heading
             eyebrow="Our philosophy"
             title="Every learning story deserves to be heard."
@@ -404,8 +404,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#E8FAF2] to-[#F5FCFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#E8FAF2] to-[#F5FCFF] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-9 flex flex-wrap items-end justify-between gap-5">
             <Heading
               eyebrow="The learning journal"
@@ -439,8 +439,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-white via-[#FFF4D9] to-[#FFF0EE] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-7 lg:gap-14 lg:grid-cols-[.8fr_1.2fr]">
+      <section className="bg-gradient-to-b from-white via-[#FFF4D9] to-[#FFF0EE] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto grid w-full max-w-7xl gap-7 lg:gap-14 lg:grid-cols-[.8fr_1.2fr] px-4 sm:px-6 lg:px-8">
           <Heading
             eyebrow="Good to know"
             title="Everything you need to know."

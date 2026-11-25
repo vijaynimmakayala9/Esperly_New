@@ -9,7 +9,7 @@ export default function Page() {
         title="Progress worth celebrating."
         description="Authentic parent and student stories will be shared here with permission once available."
       />
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <InfoGrid
           items={[
             ["Meaningful progress", "Every learner\u2019s journey is unique."],

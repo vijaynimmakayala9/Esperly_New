@@ -35,7 +35,7 @@ export default function ParallaxBanner({
       />
 
       {/* Centered middle-section content */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-5 py-16 text-center sm:px-6 md:py-20 lg:px-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center py-16 text-center md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="flex w-full max-w-[760px] flex-col items-center">
           {/* Section label */}
           <span className="inline-flex max-w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#FFC0B5] backdrop-blur-md sm:text-xs">

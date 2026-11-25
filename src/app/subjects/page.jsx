@@ -11,7 +11,7 @@ export default function Page() {
         title="Find your next breakthrough."
         description="Discover subject-focused learning designed to make challenging concepts feel approachable."
       />
-      <section className="mx-auto grid max-w-7xl gap-5 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 md:grid-cols-2">
+      <section className="mx-auto grid w-full max-w-7xl gap-5 py-12 sm:py-16 lg:py-20 md:grid-cols-2 px-4 sm:px-6 lg:px-8">
         {subjects.map((x) => (
           <SubjectCard key={x.slug} item={x} />
         ))}

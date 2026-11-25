@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = { title: "Refund Policy" };
 export default function Page() {
   return (
-    <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <main className="mx-auto w-full max-w-7xl py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl rounded-3xl border border-[#EB6664]/15 bg-white p-5 sm:p-8 shadow-xl sm:p-12">
         <p className="text-sm font-bold uppercase tracking-widest text-[#EB6664]">
           Esperly policies

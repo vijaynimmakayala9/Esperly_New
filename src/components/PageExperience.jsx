@@ -264,8 +264,8 @@ export default function PageExperience() {
       </section>
 
       {/* Supporting feature cards */}
-      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto w-full max-w-7xl">
+      <section className="bg-white py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...reveal()} className="mb-10 max-w-2xl sm:mb-12">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.19em] text-[#D95359]">
               <span className="h-px w-7 bg-[#EB6664]" /> Explore the experience

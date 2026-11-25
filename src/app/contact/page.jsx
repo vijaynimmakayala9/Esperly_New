@@ -11,7 +11,7 @@ export default function Page() {
         title="We'd love to hear from you."
         description="Have a question about tuition, learning support, or working with Esperly? Start the conversation."
       />
-      <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
         <ContactForm />
       </section>
       <PageExperience />

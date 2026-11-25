@@ -9,7 +9,7 @@ export default function Page() {
         title="Inspire curiosity. Make learning personal."
         description="Interested in teaching with Esperly? Explore the values and approach behind our future tutor community."
       />
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <InfoGrid
           items={[
             ["Teach with empathy", "Create a welcoming space for questions."],

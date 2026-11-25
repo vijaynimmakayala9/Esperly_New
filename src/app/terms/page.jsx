@@ -10,7 +10,7 @@ export default function Page() {
         title="Clear expectations for a better experience."
         description="This page is a pre-launch placeholder, not legally approved terms of service."
       />
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <InfoGrid
           items={[
             [

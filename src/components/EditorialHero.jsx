@@ -494,7 +494,7 @@ export default function EditorialHero() {
           RESPONSIVE MAIN LAYOUT
       ======================================= */}
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 py-12 sm:gap-12 sm:px-6 sm:py-16 lg:min-h-[660px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-10 lg:px-8 lg:py-20 xl:gap-14">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 py-12 sm:gap-12 sm:py-16 lg:min-h-[660px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-10 lg:py-20 xl:gap-14 px-4 sm:px-6 lg:px-8">
 
         {/* ======================================
             LEFT CONTENT
@@ -598,7 +598,7 @@ export default function EditorialHero() {
           BOTTOM EDITORIAL NAVIGATION
       ======================================= */}
 
-      <div className="relative mx-auto hidden w-full max-w-7xl items-center justify-between gap-6 px-6 pb-7 lg:flex lg:px-8">
+      <div className="relative mx-auto hidden w-full max-w-7xl items-center justify-between gap-6 pb-7 lg:flex px-4 sm:px-6 lg:px-8">
         <div
           aria-hidden="true"
           className="flex items-center gap-3"

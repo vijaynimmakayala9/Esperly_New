@@ -9,7 +9,7 @@ export default function Page() {
         title="A little more heart in every learning moment."
         description="Esperly is built around a simple belief: learning should feel personal, positive, and full of possibility."
       />
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <InfoGrid
           items={[
             [

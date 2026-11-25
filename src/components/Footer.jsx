@@ -73,7 +73,7 @@ export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-[#101827] text-white">
       <RadiantBackground />
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-10 sm:px-6 sm:pt-12 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl pt-10 sm:pt-12 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-x-10 gap-y-11 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-[1.6fr_repeat(3,minmax(0,1fr))] lg:gap-x-12 lg:py-16">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" aria-label="Esperly home" className="inline-flex items-center rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFB9AC]">

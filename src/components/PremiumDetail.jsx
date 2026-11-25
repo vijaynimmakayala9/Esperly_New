@@ -123,7 +123,7 @@ export default function PremiumDetail({ type, item, items, description }) {
       >
         <div className="pointer-events-none absolute -right-24 top-16 size-80 rounded-full bg-[#EB6664]/15 blur-3xl" />
         <div className="pointer-events-none absolute -left-20 bottom-0 size-72 rounded-full bg-[#A9A0FF]/20 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:items-center lg:gap-12">
+        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:items-center lg:gap-12">
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -238,8 +238,8 @@ export default function PremiumDetail({ type, item, items, description }) {
           </motion.div>
         </div>
       </section>
-      <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#EB6664]">
               THE ESPERLY APPROACH
@@ -282,8 +282,8 @@ export default function PremiumDetail({ type, item, items, description }) {
         title={`Your next chapter in ${item.title}.`}
         description="Build curiosity, understanding, and confidence at every step."
       />
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#111B30] via-[#252641] to-[#4C2856] px-4 py-12 lg:py-20 text-white sm:px-6 lg:px-8 lg:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-7 lg:gap-12 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#111B30] via-[#252641] to-[#4C2856] py-12 lg:py-20 text-white lg:py-28">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-7 lg:gap-12 lg:grid-cols-2 px-4 sm:px-6 lg:px-8">
           <div>
             <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-[#FFC4B6]">
               A DIFFERENT WAY TO LEARN
@@ -321,8 +321,8 @@ export default function PremiumDetail({ type, item, items, description }) {
           </div>
         </div>
       </section>
-      <section className="bg-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-[#FFF9F6] py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
               <span className="text-xs font-bold uppercase tracking-[.2em] text-[#EB6664]">
@@ -371,8 +371,8 @@ export default function PremiumDetail({ type, item, items, description }) {
           </div>
         </div>
       </section>
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 rounded-[30px] border border-[#F3CBC4] bg-gradient-to-r from-[#FFE5DC] via-[#FFF4D9] to-[#E8DEFF] p-6 shadow-[0_20px_65px_rgba(235,102,100,.12)] sm:p-9 lg:flex-row lg:items-center">
+      <section className="py-12">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-7 rounded-[30px] border border-[#F3CBC4] bg-gradient-to-r from-[#FFE5DC] via-[#FFF4D9] to-[#E8DEFF] p-6 shadow-[0_20px_65px_rgba(235,102,100,.12)] sm:p-9 lg:flex-row lg:items-center px-4 sm:px-6 lg:px-8">
           <div>
             <h2 className="text-2xl sm:text-[1.75rem] font-black tracking-[-.04em] sm:text-4xl">
               Ready for your next breakthrough?

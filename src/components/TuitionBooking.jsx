@@ -103,7 +103,7 @@ export default function TuitionBooking({ title }) {
  const groups = getSubjectsByClass(title);
  const ready = [!!board,subjects.length>0,!!days&&!!start];
  return <section id="tuition-booking" className="scroll-mt-28 bg-gradient-to-br from-sky-50 via-violet-50 to-amber-50 px-4 py-16 sm:px-8 lg:py-24">
- <div className="mx-auto max-w-6xl">
+ <div className="mx-auto w-full max-w-7xl">
  <div className="mb-9 max-w-3xl"><p className="font-bold uppercase tracking-widest text-[#C94846]">Your personalized learning plan</p><h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Make {title} learning <span className="text-violet-700">your own.</span></h2><p className="mt-4 text-slate-600">Choose the curriculum, subjects and schedule that suit your goals.</p></div>
  <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
  <div ref={panel} className="scroll-mt-28 rounded-[32px] border border-white bg-white/90 p-5 shadow-xl shadow-violet-200/40 sm:p-8">

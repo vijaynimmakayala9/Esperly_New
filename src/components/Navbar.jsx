@@ -200,7 +200,7 @@ export default function Navbar() {
         className={`sticky top-0 z-50 border-b border-slate-100/80 bg-white/90 backdrop-blur-xl transition-all ${scrolled ? "shadow-lg shadow-slate-900/5" : ""}`}
       >
         <div
-          className={`mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 transition-all lg:px-8 ${scrolled ? "h-[56px] sm:h-[60px]" : "h-[60px] sm:h-[68px]"}`}
+          className={`mx-auto flex w-full max-w-7xl items-center justify-between gap-5 px-5 transition-all lg:px-8 ${scrolled ? "h-[56px] sm:h-[60px]" : "h-[60px] sm:h-[68px]"}`}
         >
           <Link
             href="/"

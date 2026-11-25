@@ -12,7 +12,7 @@ export default function Page() {
         title="Learning aligned with your school journey."
         description="Explore proposed curriculum pathways. Please confirm which boards and grades Esperly currently supports."
       />
-      <section className="mx-auto grid max-w-7xl gap-5 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto grid w-full max-w-7xl gap-5 py-12 sm:py-16 lg:py-20 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8">
         {curricula.map((c, i) => (
           <Link
             key={c.slug}

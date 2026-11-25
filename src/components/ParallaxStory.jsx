@@ -11,8 +11,8 @@ const images = {
 };
 export default function ParallaxStory({ kind = "home", title = "Make room for curiosity.", description = "Explore learning with clear goals, thoughtful guidance and space to grow at your own pace." }) {
   return (
-    <section className="overflow-hidden bg-gradient-to-br from-[#EAF4FF] via-[#FFF9F6] to-[#EDE5FF] px-5 py-16 sm:px-8 lg:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20">
+    <section className="overflow-hidden bg-gradient-to-br from-[#EAF4FF] via-[#FFF9F6] to-[#EDE5FF] py-16 lg:py-24">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20 px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="group relative aspect-[5/4] overflow-hidden rounded-[32px] border-[6px] border-white bg-[#DCEBFF] shadow-[0_24px_70px_rgba(23,36,58,.16)]">
             <ParallaxImage src={images[kind] || images.tuition} alt="Educational learning environment" sizes="(max-width:1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />

@@ -209,7 +209,7 @@ export default function LearningDetail({
         <div className="pointer-events-none absolute -left-24 top-10 h-56 w-56 rounded-full bg-[#EB6664]/10 blur-3xl sm:h-72 sm:w-72" />
         <div className="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-violet-300/20 blur-3xl" />
 
-        <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 py-9 sm:px-6 sm:py-11 lg:grid-cols-2 lg:items-stretch lg:gap-10 lg:px-8 lg:py-12 xl:gap-12">
+        <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 py-9 sm:py-11 lg:grid-cols-2 lg:items-stretch lg:gap-10 lg:py-12 xl:gap-12 px-4 sm:px-6 lg:px-8">
           {/* LEFT SIDE */}
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, x: -24 }}
@@ -414,7 +414,7 @@ export default function LearningDetail({
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative mx-auto w-full max-w-7xl py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#EB6664]">
             What you will explore
@@ -482,7 +482,7 @@ export default function LearningDetail({
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-32 -left-28 h-80 w-80 rounded-full bg-violet-500/20 blur-[90px]"
         />
-        <div className="relative mx-auto grid max-w-7xl gap-7 lg:gap-12 px-5 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:gap-20 lg:px-8">
+        <div className="relative mx-auto grid w-full max-w-7xl gap-7 lg:gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:gap-20 px-4 sm:px-6 lg:px-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-[.2em] text-[#FFB5AA]">
               Why this approach works
@@ -533,7 +533,7 @@ export default function LearningDetail({
           </div>
         </div>
       </section>
-      <section className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative mx-auto w-full max-w-7xl py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#EB6664]">
             Simple steps
@@ -568,7 +568,7 @@ export default function LearningDetail({
         </div>
       </section>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#FFF0EB] via-[#FFF9F6] to-[#EFEAFF] py-14 sm:py-16 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-2 lg:items-center px-4 sm:px-6 lg:px-8">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#D65557]">
               Learning outcomes
@@ -599,7 +599,7 @@ export default function LearningDetail({
           </div>
         </div>
       </section>
-      <section className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative mx-auto w-full max-w-7xl py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-7 lg:gap-12 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#EB6664]">
@@ -639,7 +639,7 @@ export default function LearningDetail({
         </div>
       </section>
       {related.length > 0 && (
-        <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-6 lg:px-8">
+        <section className="mx-auto w-full max-w-7xl pb-20 px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between gap-5">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#EB6664]">
@@ -676,7 +676,7 @@ export default function LearningDetail({
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-violet-500/20 blur-[85px]"
         />
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 sm:px-6 lg:flex-row lg:items-center lg:px-8">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-8 lg:flex-row lg:items-center px-4 sm:px-6 lg:px-8">
           <div>
             <span className="text-xs font-extrabold uppercase tracking-[.2em] text-[#FFB5AA]">
               Ready to begin?

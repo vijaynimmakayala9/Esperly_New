@@ -14,8 +14,8 @@ export default function Page() {
         description="Learn more about the proposed Esperly learning experience, explore next steps, and get in touch if you need more details."
         image="laptop"
       />
-      <section className="bg-white px-5 py-14 sm:px-8 lg:py-20">
-        <div className="mx-auto max-w-3xl">
+      <section className="bg-white py-14 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-8 text-2xl font-extrabold text-[#17243A] sm:text-3xl">
             Your questions, answered
           </h2>
