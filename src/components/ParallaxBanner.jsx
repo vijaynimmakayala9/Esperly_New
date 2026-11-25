@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "@/components/BrandIcons";
 
 export default function ParallaxBanner({
   eyebrow = "THE ESPERLY EXPERIENCE",

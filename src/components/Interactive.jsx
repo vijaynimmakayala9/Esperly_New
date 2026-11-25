@@ -16,7 +16,7 @@ import {
   ShieldCheck,
   GraduationCap,
   ArrowUpRight,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 import { faqs } from "@/data/site";
 
 const inputClass =

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import EducationArt from "./EducationArt";
 import ParallaxBanner from "./ParallaxBanner";
 import Link from "next/link";
 import {
@@ -14,7 +15,7 @@ import {
   Sparkles,
   Target,
   WandSparkles,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 
 const themes = {
   programs: {
@@ -205,13 +206,11 @@ export default function PremiumDetail({ type, item, items, description }) {
                 </span>
               </div>
               <div className="relative mt-4 overflow-hidden rounded-[24px] border border-[#F7E7E4] bg-gradient-to-br from-[#FFF4F0] via-[#F9F4FF] to-[#EFFCF6] p-4">
-                <img
-                  src="/animations/learning-cap.gif"
-                  alt="Animated graduation cap and open book"
-                  width="400"
-                  height="400"
-                  loading="lazy"
-                  className="mx-auto aspect-square w-full max-w-[240px] object-contain sm:max-w-[280px]"
+                <EducationArt
+                  name="learning"
+                  label="Graduation cap and open book"
+                  className="mx-auto aspect-square w-full max-w-[240px] sm:max-w-[280px]"
+                  glow
                 />
               </div>
               <div className="mt-4 grid grid-cols-2 gap-3">

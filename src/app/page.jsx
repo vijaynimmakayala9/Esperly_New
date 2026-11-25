@@ -1,4 +1,4 @@
-import LottieArt from "@/components/LottieArt";
+import EducationArt from "@/components/EducationArt";
 import PremiumShowcase from "@/components/PremiumShowcase";
 import AnimatedIcon from "@/components/AnimatedIcon";
 import EditorialHero from "@/components/EditorialHero";
@@ -22,7 +22,7 @@ import {
   ChartNoAxesCombined,
   Clock,
   GraduationCap,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 import {
   Button,
   Heading,
@@ -130,7 +130,7 @@ export default function Home() {
               key={name}
               className="group relative overflow-hidden rounded-[26px] border border-[#EB6664]/15 bg-white p-5 text-center shadow-[0_8px_25px_rgba(23,36,58,.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/35 hover:shadow-[0_25px_60px_rgba(235,102,100,.16)] sm:p-7"
             >
-              <LottieArt
+              <EducationArt
                 name={name}
                 className="mx-auto h-36 w-44"
                 glow

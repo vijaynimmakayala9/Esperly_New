@@ -13,7 +13,7 @@ import {
   BookOpen,
   HeartHandshake,
   Target,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 
 const pageContent = {
   about: [

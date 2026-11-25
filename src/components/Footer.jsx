@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BookOpen, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpen, Sparkles } from "@/components/BrandIcons";
 
 const groups = [
   ["Explore", ["About", "/about"], ["Programs", "/programs"], ["Subjects", "/subjects"], ["Curriculum", "/curriculum"], ["How it works", "/how-it-works"]],

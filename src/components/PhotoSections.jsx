@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowUpRight, Sparkles, BookOpen, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, Sparkles, BookOpen, CheckCircle2 } from "@/components/BrandIcons";
 
 const photos = {
   study:

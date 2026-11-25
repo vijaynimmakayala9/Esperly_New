@@ -7,7 +7,7 @@ import {
   BookOpen,
   Sparkles,
   GraduationCap,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 import { Button, Reveal } from "./UI";
 
 export function PageHero({ eyebrow, title, description }) {

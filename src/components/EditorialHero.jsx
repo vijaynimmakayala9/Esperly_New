@@ -20,7 +20,7 @@ import {
   Star,
   Play,
   MoveUpRight,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 
 const features = [
   "One-to-one guidance",

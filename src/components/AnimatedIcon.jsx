@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import * as LucideIcons from "lucide-react";
+import * as LucideIcons from "@/components/BrandIcons";
 
 // Accept serializable icon names across the Next.js Server/Client boundary.
 export default function AnimatedIcon({

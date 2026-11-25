@@ -13,7 +13,7 @@ import {
   Search,
   X,
   ArrowUpRight,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 import { Button } from "./UI";
 import {
   tuitionGroups,

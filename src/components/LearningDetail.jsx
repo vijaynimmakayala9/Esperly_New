@@ -24,7 +24,7 @@ import {
   Target,
   TrendingUp,
   WandSparkles,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 
 const details = {
   tuition: {

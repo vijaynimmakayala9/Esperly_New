@@ -11,8 +11,8 @@ import {
   PlayCircle,
   Check,
   ArrowRight,
-} from "lucide-react";
-import LottieArt from "./LottieArt";
+} from "@/components/BrandIcons";
+import EducationArt from "./EducationArt";
 
 const perks = [
   {
@@ -166,7 +166,7 @@ export default function PremiumShowcase() {
               </span>
             </div>
 
-            {/* Stable, visible dimensions for the Lottie renderer. */}
+            {/* Stable dimensions for the SVG illustration. */}
             <div className="relative my-5 flex min-h-[260px] items-center justify-center overflow-hidden rounded-[24px] bg-gradient-to-br from-[#FFF9F6] via-[#FFF4F2] to-[#F3EFFF] sm:min-h-[350px]">
               <div
                 aria-hidden="true"
@@ -176,7 +176,7 @@ export default function PremiumShowcase() {
                 aria-hidden="true"
                 className="pointer-events-none absolute bottom-6 right-8 size-24 rounded-full border border-violet-300/35"
               />
-              <LottieArt
+              <EducationArt
                 name="learning"
                 className="relative z-10 mx-auto h-[250px] w-full max-w-[420px] sm:h-[340px]"
                 glow

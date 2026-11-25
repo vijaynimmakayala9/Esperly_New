@@ -14,7 +14,7 @@ import {
   Users,
   CheckCircle2,
   Sparkles,
-} from "lucide-react";
+} from "@/components/BrandIcons";
 
 import AnimatedIcon from "./AnimatedIcon";
 

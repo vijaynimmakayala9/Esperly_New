@@ -1,5 +1,4 @@
 import PageExperience from "@/components/PageExperience";
-import LottieArt from "@/components/LottieArt";
 import { PageHero } from "@/components/PageParts";
 import { BookingForm } from "@/components/Interactive";
 export const metadata = { title: "Book a Free Demo" };
