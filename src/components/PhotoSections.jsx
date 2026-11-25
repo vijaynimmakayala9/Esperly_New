@@ -1,7 +1,7 @@
 "use client";
 
 import { cardTheme } from "@/lib/cardThemes";
-import Image from "next/image";
+import ParallaxImage from "@/components/ParallaxImage";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight, Sparkles, BookOpen, CheckCircle2 } from "@/components/BrandIcons";
@@ -117,7 +117,7 @@ export function PhotoHero({
             className="absolute -inset-4 rounded-[40px] bg-gradient-to-br from-[#EB6664]/20 via-violet-300/20 to-transparent blur-2xl"
           />
           <div className="relative aspect-[5/4] overflow-hidden rounded-[28px] border-[5px] border-white/80 shadow-[0_28px_75px_rgba(23,36,58,.18)] sm:rounded-[36px]">
-            <Image
+            <ParallaxImage
               src={photoFor(image)}
               alt={`${eyebrow || "Esperly"} — students and learning`}
               fill
@@ -170,7 +170,7 @@ export function PhotoCards({ eyebrow, title, items = [] }) {
               className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] border ${cardTheme(i)} shadow-[0_12px_32px_rgba(23,36,58,.045)] transition-[border-color,box-shadow] duration-300 hover:border-[#EB6664]/35 hover:shadow-[0_22px_55px_rgba(23,36,58,.11)]`}
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-[#F8F0EE]">
-                <Image
+                <ParallaxImage
                   src={photoFor(
                     item.image,
                     ["study", "classroom", "books"][i % 3],
@@ -222,10 +222,11 @@ export function PhotoStrip({
 }) {
   const reduced = useReducedMotion();
   return (
-    <section className="relative isolate flex min-h-[340px] items-center overflow-hidden bg-[#17243A] py-16 text-white sm:min-h-[380px] sm:py-20">
-      <Image
+    <section className="relative isolate flex min-h-[340px] items-center overflow-hidden bg-[#17243A] py-16 text-white sm:min-h-[380px] md:min-h-[62svh] sm:py-20">
+      <ParallaxImage
         src={photoFor(image, "classroom")}
         alt="Students learning together"
+        fixed
         fill
         sizes="100vw"
         className="-z-20 object-cover object-center"

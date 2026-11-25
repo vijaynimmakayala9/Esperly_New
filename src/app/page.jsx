@@ -1,10 +1,12 @@
+import ParallaxStory from "@/components/ParallaxStory";
+import ParallaxBanner from "@/components/ParallaxBanner";
 import { cardTheme } from "@/lib/cardThemes";
 import EducationArt from "@/components/EducationArt";
 import PremiumShowcase from "@/components/PremiumShowcase";
 import AnimatedIcon from "@/components/AnimatedIcon";
 import EditorialHero from "@/components/EditorialHero";
 import Link from "next/link";
-import Image from "next/image";
+import ParallaxImage from "@/components/ParallaxImage";
 import {
   ArrowRight,
   BookOpen,
@@ -162,6 +164,7 @@ export default function Home() {
           </Slider>
         </div>
       </section>
+      <ParallaxStory />
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#101827] via-[#1E2943] to-[#452C56] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="pointer-events-none absolute -right-20 -top-24 h-96 w-96 rounded-full bg-[#EB6664]/25 blur-3xl" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
@@ -353,7 +356,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
           <Reveal>
             <div className="group relative aspect-[5/4] overflow-hidden rounded-[30px] border-[5px] border-white bg-[#FFF0EE] shadow-[0_25px_65px_rgba(23,36,58,.12)] sm:rounded-[36px]">
-              <Image
+              <ParallaxImage
                 src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1100&q=85"
                 alt="Students learning together"
                 fill
@@ -379,6 +382,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ParallaxBanner image="/images/learning-parallax.webp" title="A little progress. A world of possibility." />
       <section className="relative overflow-hidden bg-gradient-to-br from-[#111827] via-[#22283F] to-[#382A4A] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading

@@ -4,6 +4,7 @@ import { cardTheme } from "@/lib/cardThemes";
 import { motion, useReducedMotion } from "motion/react";
 import EducationArt from "./EducationArt";
 import ParallaxBanner from "./ParallaxBanner";
+import ParallaxStory from "./ParallaxStory";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -275,6 +276,7 @@ export default function PremiumDetail({ type, item, items, description }) {
           </div>
         </div>
       </section>
+      <ParallaxStory kind={type} title={`Discover a new perspective on ${item.title}.`} />
       <ParallaxBanner
         eyebrow="EXPLORE MORE WITH ESPERLY"
         title={`Your next chapter in ${item.title}.`}

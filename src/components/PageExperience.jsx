@@ -2,7 +2,7 @@
 
 import { cardTheme } from "@/lib/cardThemes";
 import Link from "next/link";
-import Image from "next/image";
+import ParallaxImage from "@/components/ParallaxImage";
 import { usePathname } from "next/navigation";
 import { motion, useReducedMotion } from "motion/react";
 import ParallaxBanner from "./ParallaxBanner";
@@ -227,7 +227,7 @@ export default function PageExperience() {
             />
             <div className="group relative overflow-hidden rounded-[30px] border border-white/80 bg-white p-3 shadow-[0_30px_80px_rgba(23,36,58,0.12)] sm:p-4">
               <div className="relative aspect-[5/4] overflow-hidden rounded-[22px] sm:aspect-[6/5]">
-                <Image
+                <ParallaxImage
                   src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1100&q=85"
                   alt="Student studying with books and notes"
                   fill
@@ -288,7 +288,7 @@ export default function PageExperience() {
                   className={`group relative flex h-full flex-col overflow-hidden rounded-[26px] border ${cardTheme(i)} p-3 shadow-[0_10px_35px_rgba(23,36,58,0.045)] transition-all duration-500 hover:-translate-y-2 hover:border-[#EB6664]/30 hover:shadow-[0_24px_55px_rgba(23,36,58,0.1)] sm:p-4`}
                 >
                   <div className="relative aspect-[16/10] overflow-hidden rounded-[18px]">
-                    <Image
+                    <ParallaxImage
                       src={photos[i % photos.length]}
                       alt={point}
                       fill

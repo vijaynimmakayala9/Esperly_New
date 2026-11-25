@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ParallaxImage from "@/components/ParallaxImage";
 import Link from "next/link";
 import {
   motion,
@@ -232,7 +232,7 @@ export default function EditorialHero() {
             style={{ y: imageY }}
             className="relative mx-auto aspect-[1.08/1] w-[90%] overflow-hidden rounded-[32px] border-[6px] border-white bg-[#F7B9A9] shadow-[0_30px_85px_rgba(23,36,58,.17)] sm:aspect-[1.1/1] sm:rounded-[48px] sm:border-[8px] lg:w-[92%]"
           >
-            <Image
+            <ParallaxImage
               src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1100&q=85"
               alt="Student studying with learning materials"
               fill

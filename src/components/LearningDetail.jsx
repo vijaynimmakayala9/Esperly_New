@@ -4,6 +4,7 @@ import { cardTheme } from "@/lib/cardThemes";
 import { motion, useReducedMotion } from "motion/react";
 import TuitionBooking from "./TuitionBooking";
 import ParallaxBanner from "./ParallaxBanner";
+import ParallaxStory from "./ParallaxStory";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -469,6 +470,7 @@ export default function LearningDetail({
         </div>
       </section>
       {kind === "tuition" && /^Class \d+$/.test(title) && <TuitionBooking key={title} title={title} />}
+      <ParallaxStory kind={kind} title={`Discover a new perspective on ${title}.`} />
       <ParallaxBanner
         eyebrow="PERSONALIZED LEARNING"
         title={`A brighter path for ${title}.`}

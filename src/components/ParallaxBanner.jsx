@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ParallaxImage from "./ParallaxImage";
 import { ArrowUpRight, Sparkles } from "@/components/BrandIcons";
 
 export default function ParallaxBanner({
@@ -12,13 +13,13 @@ export default function ParallaxBanner({
 }) {
   return (
     <section
-      className="relative isolate flex min-h-[420px] w-full items-center justify-center bg-[#17243A] bg-cover bg-center bg-no-repeat bg-scroll text-white md:min-h-[50svh] md:bg-fixed"
-      style={{ backgroundImage: `url("${image}")` }}
+      className="relative isolate flex min-h-[420px] w-full items-center justify-center bg-[#17243A] overflow-hidden text-white md:min-h-[68svh]"
     >
+      <ParallaxImage src={image} alt="" sizes="100vw" strength={10} fixed className="object-cover object-center" />
       {/* Dark cinematic overlay */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[#0D1729]/65"
+        className="pointer-events-none absolute inset-0 bg-[#0D1729]/45"
       />
 
       {/* Balanced gradient for centered content */}
