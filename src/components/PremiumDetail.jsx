@@ -369,7 +369,7 @@ export default function PremiumDetail({ type, item, items, description }) {
         </div>
       </section>
       <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 rounded-[30px] border border-[#F3CBC4] bg-gradient-to-r from-[#FFF0EE] via-[#FFF9F6] to-[#F1EDFF] p-6 shadow-[0_20px_65px_rgba(235,102,100,.12)] sm:p-9 lg:flex-row lg:items-center">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 rounded-[30px] border border-[#F3CBC4] bg-gradient-to-r from-[#FFE5DC] via-[#FFF4D9] to-[#E8DEFF] p-6 shadow-[0_20px_65px_rgba(235,102,100,.12)] sm:p-9 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-2xl sm:text-[1.75rem] font-black tracking-[-.04em] sm:text-4xl">
               Ready for your next breakthrough?

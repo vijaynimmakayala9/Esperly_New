@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import TuitionBooking from "./TuitionBooking";
 import ParallaxBanner from "./ParallaxBanner";
 import Link from "next/link";
 import {
@@ -250,7 +251,7 @@ export default function LearningDetail({
             {/* CTAs */}
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
-                href="/book-demo"
+                href={kind === "tuition" && /^Class \d+$/.test(title) ? "#tuition-booking" : "/book-demo"}
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#EB6664] px-5 py-2.5 text-sm font-bold text-white shadow-[0_12px_30px_rgba(235,102,100,.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#D65357] hover:shadow-xl"
               >
                 Book Free Demo
@@ -466,6 +467,7 @@ export default function LearningDetail({
           ))}
         </div>
       </section>
+      {kind === "tuition" && /^Class \d+$/.test(title) && <TuitionBooking key={title} title={title} />}
       <ParallaxBanner
         eyebrow="PERSONALIZED LEARNING"
         title={`A brighter path for ${title}.`}
@@ -684,7 +686,7 @@ export default function LearningDetail({
             </p>
           </div>
           <Link
-            href="/book-demo"
+            href={kind === "tuition" && /^Class \d+$/.test(title) ? "#tuition-booking" : "/book-demo"}
             className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#EB6664] to-[#F38C7A] px-7 py-3.5 text-sm font-bold shadow-[0_15px_40px_rgba(235,102,100,.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(235,102,100,.45)]"
           >
             Book a Free Demo <ArrowUpRight size={18} />

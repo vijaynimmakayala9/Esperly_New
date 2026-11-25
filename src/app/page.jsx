@@ -60,7 +60,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#EAF4FF] to-[#F5F0FF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading
             eyebrow="The Esperly difference"
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </section>
       <PremiumShowcase />
-      <section className="bg-gradient-to-b from-white to-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <section className="bg-gradient-to-b from-white via-[#E8FAF2] to-[#F5FCFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-3">
           {[
             ["book", "Explore ideas", "Animated learning moments"],
@@ -142,7 +142,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFF0EE] via-[#FFF9F6] to-[#F1EDFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFE5DC] via-[#FFF4D9] to-[#E8DEFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
             <Heading
@@ -237,7 +237,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFF4D9] to-[#FFF0EE] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-5">
             <Heading
@@ -256,7 +256,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-white to-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="bg-gradient-to-b from-white via-[#F0E9FF] to-[#EAF4FF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading
             eyebrow="Simple by design"
@@ -348,7 +348,7 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#EAF4FF] to-[#F5F0FF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-8 lg:gap-16 lg:grid-cols-2">
           <Reveal>
             <div className="group relative aspect-[5/4] overflow-hidden rounded-[30px] border-[5px] border-white bg-[#FFF0EE] shadow-[0_25px_65px_rgba(23,36,58,.12)] sm:rounded-[36px]">
@@ -399,7 +399,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FFFCFA] to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#E8FAF2] to-[#F5FCFF] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-9 flex flex-wrap items-end justify-between gap-5">
             <Heading
@@ -434,7 +434,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-white to-[#FFF9F6] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="bg-gradient-to-b from-white via-[#FFF4D9] to-[#FFF0EE] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-7 lg:gap-14 lg:grid-cols-[.8fr_1.2fr]">
           <Heading
             eyebrow="Good to know"
